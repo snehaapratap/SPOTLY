@@ -1,0 +1,52 @@
+.explore-text {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.wavy-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #3498db;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.wavy-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.wavy-button:before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.2);
+  animation: wave 2s infinite;
+  transform: translateX(-50%);
+}
+
+@keyframes wave {
+  0% {
+    top: -50%;
+    transform: scale(1);
+  }
+  50% {
+    top: 0%;
+    transform: scale(1.2);
+  }
+  100% {
+    top: -50%;
+    transform: scale(1);
+  }
+}
